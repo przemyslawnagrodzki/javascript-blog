@@ -12,28 +12,29 @@ function titleClickHandler(event){
   }
   /* [DONE] add class 'active' to the clicked link */
   
-  function titleClickHandler(event){
+  
     const clickedElement = this;
     event.preventDefault();
     console.log('clickedElement (with plus):' + clickedElement);
-  }
-}
+    clickedElement.classList.add('active');
+  
   /* [DONE] remove class 'active' from all articles */
   const activeArticles = document.querySelectorAll('.posts article.active');
 
   for(let activeArticle of activeArticles){
     activeArticle.classList.remove('active');
   }
-  /* [IN PROGRESS] get 'href' attribute from the clicked link */
-  function titleClickHandler(event){
-  const clickedElement = this
+  /* [DONE] get 'href' attribute from the clicked link */
+
+  
   const articleSelector = clickedElement.getAttribute('href');
   console.log(articleSelector);
-  }
-  /* find the correct article using the selector (value of 'href' attribute) */
-
+  
+  /* [IN PROGRESS] find the correct article using the selector (value of 'href' attribute) */
+  const targetArticle = document.querySelector('articleSelector')
+  console.log(targetArticle)
   /* add class 'active' to the correct article */
-
+}
 const links = document.querySelectorAll('.titles a');
 
 for(let link of links){
