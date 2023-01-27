@@ -12,6 +12,7 @@ function titleClickHandler(event){
   }
   /* [IN PROGRESS] add class 'active' to the clicked link */
   console.log('clickedElement:', clickedElement);
+  event.preventDefault();
   const clickedElement = this;
   function titleClickHandler(clickedElement){
     clickedElement.add('active');
