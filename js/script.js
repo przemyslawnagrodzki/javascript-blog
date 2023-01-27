@@ -10,23 +10,26 @@ function titleClickHandler(event){
   for(let activeLink of activeLinks){
     activeLink.classList.remove('active');
   }
-  /* [IN PROGRESS] add class 'active' to the clicked link */
+  /* [DONE] add class 'active' to the clicked link */
   
   function titleClickHandler(event){
     const clickedElement = this;
     event.preventDefault();
     console.log('clickedElement (with plus):' + clickedElement);
   }
-  }
-  
+}
   /* [DONE] remove class 'active' from all articles */
   const activeArticles = document.querySelectorAll('.posts article.active');
 
   for(let activeArticle of activeArticles){
     activeArticle.classList.remove('active');
   }
-  /* get 'href' attribute from the clicked link */
-
+  /* [IN PROGRESS] get 'href' attribute from the clicked link */
+  function titleClickHandler(event){
+  const clickedElement = this
+  const articleSelector = clickedElement.getAttribute('href');
+  console.log(articleSelector);
+  }
   /* find the correct article using the selector (value of 'href' attribute) */
 
   /* add class 'active' to the correct article */
