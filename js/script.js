@@ -193,11 +193,11 @@ function addClickListenersToAuthors() {
   /* [DONE] find all links to authors */
   const allAuthorsLinks = document.querySelectorAll('a[href^="#author-"]')
   console.log(allAuthorsLinks)
-  /* [IN PROGRESS]  START LOOP: for each link */
+  /* [DONE]  START LOOP: for each link */
   for(let allAuthorsLink of allAuthorsLinks) {
     console.log(allAuthorsLink)
-  /* add tagClickHandler as event listener for that link */
-
+  /* [IN PROGRESS] add authorsClickHandler as event listener for that link */
+    allAuthorsLink.addEventListener('click', authorClickHandler)
   /* END LOOP: for each link */
   }
 }
