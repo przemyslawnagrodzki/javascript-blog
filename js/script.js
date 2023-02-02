@@ -76,11 +76,11 @@ for(let link of links){
 }
 
 function generateTags(){
-  /* [IN PROGRESS] find all articles */
+  /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleSelector)
   console.log(articles);
-  /* START LOOP: for every article: */
-
+  /* [IN PROGRESS] START LOOP: for every article: */
+  for(let article of articles) {
     /* find tags wrapper */
 
     /* make html variable with empty string */
