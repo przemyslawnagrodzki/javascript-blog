@@ -133,7 +133,7 @@ function tagClickHandler(event){
   /* [DONE] END LOOP: for each active tag link */
   }
   /* [DONE] find all tag links with "href" attribute equal to the "href" constant */
-  const linkHREF = document.querySelectorAll(''a[href="' + href + '"]'')
+  const linkHREF = document.querySelectorAll('a[href="' + href + '"]')
   console.log(linkHREF)
   /* [DONE] START LOOP: for each found tag link */
   for(let tagLink of tagLinks) {
@@ -142,13 +142,13 @@ function tagClickHandler(event){
     tagLink.classList.add('active')
   /* [DONE] END LOOP: for each found tag link */
   }
-  /* [IN PROGRESS] execute function "generateTitleLinks" with article selector as argument */
+  /* [DONE] execute function "generateTitleLinks" with article selector as argument */
   generateTitleLinks('[data-tags~="' + tag + '"]');
 }
 
 function addClickListenersToTags(){
-  /* find all links to tags */
-
+  /* [IN PROGRESS] find all links to tags */
+  const AllTagsLinks = document.querySelectorAll('a[href^="#tag-"]')
   /* START LOOP: for each link */
 
     /* add tagClickHandler as event listener for that link */
