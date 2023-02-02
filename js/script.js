@@ -179,10 +179,10 @@ function generateAuthors() {
   /*  [DONE] generate HTML of the link */
     const authorLinkHTML = '<li><a href="#author-' + author + '"><span>' + author + '</span></a></li>'
     console.log(authorLinkHTML)
-  /* [IN PROGRESS] add generated code to html variable */
+  /* [DONE] add generated code to html variable */
     html = html + authorLinkHTML
-  /* insert html of all the links into post-author */
-
+  /* [IN PROGRESS] insert html of all the links into post-author */
+    authorLinkHTML.innerHTML = html
   /*  End loop for every article */
   }
 }
