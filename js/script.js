@@ -162,13 +162,15 @@ function addClickListenersToTags(){
 addClickListenersToTags();
 
 function generateAuthors() {
-  /* [IN PROGRESS] find all articles */
+  /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleAuthorSelector)
   console.log(articles)
-  /*  Start loop for every article */
-
-  /*  find authors wrapper */
-
+  /* [IN PROGRESS] Start loop for every article */
+  for(let article of articles) {
+    console.log(article)
+  /* [IN PROGRESS] find authors wrapper */
+    const authorsWrapper = document.querySelector(optArticleAuthorSelector)
+    console.log(authorsWrapper)
   /*  make html variable with empty string */
 
   /*  get authors from an element */
@@ -180,4 +182,5 @@ function generateAuthors() {
   /* insert html of all the links into post-author */
 
   /*  End loop for every article */
+  }
 }
