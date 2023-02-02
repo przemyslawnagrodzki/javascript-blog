@@ -171,10 +171,10 @@ function generateAuthors() {
   /* [DONE] find authors wrapper */
     const authorsWrapper = document.querySelector(optArticleAuthorSelector)
     console.log(authorsWrapper)
-  /*  [IN PROGRESS] make html variable with empty string */
+  /*  [DONE] make html variable with empty string */
   let html = ''
-  /*  get authors from an element */
-
+  /*  [IN PROGRESS] get authors from an element */
+    const author = article.getAttribute('data-author')
   /*  geerate HTML of the link */
 
   /* add generated code to html variable */
