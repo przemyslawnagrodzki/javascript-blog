@@ -113,11 +113,12 @@ generateTags();
 function tagClickHandler(event){
   /*  [DONE] prevent default action for this event */
   event.preventDefault();
-  /* [IN PROGRESS] make new constant named "clickedElement" and give it the value of "this" */
+  /*  [DONE] make new constant named "clickedElement" and give it the value of "this" */
   const clickedElement = this
   console.log(clickedElement)
-  /* make a new constant "href" and read the attribute "href" of the clicked element */
-
+  /* [IN PROGRESS] make a new constant "href" and read the attribute "href" of the clicked element */
+  const href = clickedElement.getAttribute('href')
+  console.log(href)
   /* make a new constant "tag" and extract tag from the "href" constant */
 
   /* find all tag links with class active */
