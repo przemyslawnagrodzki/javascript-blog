@@ -172,11 +172,13 @@ function generateAuthors() {
     const authorsWrapper = document.querySelector(optArticleAuthorSelector)
     console.log(authorsWrapper)
   /*  [DONE] make html variable with empty string */
-  let html = ''
-  /*  [IN PROGRESS] get authors from an element */
+    let html = ''
+  /*  [DONE] get author from data-author attribute */
     const author = article.getAttribute('data-author')
-  /*  geerate HTML of the link */
-
+    console.loh(author)
+  /*  [IN PROGRESS] generate HTML of the link */
+    const authorLinkHTML = '<li><a href="#author-' + author + '"><span>' + author + '</span></a></li>'
+    console.log(authorLinkHTML)
   /* add generated code to html variable */
 
   /* insert html of all the links into post-author */
