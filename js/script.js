@@ -176,11 +176,11 @@ function generateAuthors() {
   /*  [DONE] get author from data-author attribute */
     const author = article.getAttribute('data-author')
     console.loh(author)
-  /*  [IN PROGRESS] generate HTML of the link */
+  /*  [DONE] generate HTML of the link */
     const authorLinkHTML = '<li><a href="#author-' + author + '"><span>' + author + '</span></a></li>'
     console.log(authorLinkHTML)
-  /* add generated code to html variable */
-
+  /* [IN PROGRESS] add generated code to html variable */
+    html = html + authorLinkHTML
   /* insert html of all the links into post-author */
 
   /*  End loop for every article */
