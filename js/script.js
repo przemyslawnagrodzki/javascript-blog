@@ -132,15 +132,14 @@ function tagClickHandler(event){
   tagLink.classList.remove('active')
   /* [DONE] END LOOP: for each active tag link */
   }
-  /* [IN PROGRESS] find all tag links with "href" attribute equal to the "href" constant */
+  /* [DONE] find all tag links with "href" attribute equal to the "href" constant */
   const linkHREF = document.querySelectorAll(''a[href="' + href + '"]'')
   console.log(linkHREF)
-  /* START LOOP: for each found tag link */
+  /* [DONE] START LOOP: for each found tag link */
   for(let tagLink of tagLinks) {
     console.log(tagLink)
-  }
-    /* add class active */
-
+    /* [I PROGRESS] add class active */
+    tagLink.classList.add('active')
   /* END LOOP: for each found tag link */
 
   /* execute function "generateTitleLinks" with article selector as argument */
