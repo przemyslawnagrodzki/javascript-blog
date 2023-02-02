@@ -190,11 +190,12 @@ function generateAuthors() {
 generateAuthors()
 
 function addClickListenersToAuthors() {
-  /* find all links to authors */
+  /* [IN PROGRESS] find all links to authors */
+  const allAuthorsLinks = document.querySelectorAll('a[href^="#author-"]')
+  console.log(allAuthorsLinks)
+  /* START LOOP: for each link */
 
-  /* START LOOP: for each author */
-
-  /* add tagClickHandler as event listener for that author */
+  /* add tagClickHandler as event listener for that link */
 
   /* END LOOP: for each link */
 
