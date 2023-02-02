@@ -79,10 +79,11 @@ function generateTags(){
   /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleSelector)
   console.log(articles);
-  /* [IN PROGRESS] START LOOP: for every article: */
+  /* [DONE] START LOOP: for every article: */
   for(let article of articles) {
-    /* find tags wrapper */
-
+    /* [IN PROGRESS] find tags wrapper */
+  const titleList = article.querySelector(optArticleTagsSelector)
+  console.log(titleList)
     /* make html variable with empty string */
 
     /* get tags from data-tags attribute */
