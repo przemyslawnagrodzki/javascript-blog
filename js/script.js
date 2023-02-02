@@ -159,3 +159,23 @@ function addClickListenersToTags(){
 }
 }
 addClickListenersToTags();
+
+function generateAuthors() {
+  /* [IN PROGRESS] find all articles */
+
+  /*  Start loop for every article */
+
+  /*  find authors wrapper */
+
+  /*  make html variable with empty string */
+
+  /*  get authors from an element */
+
+  /*  geerate HTML of the link */
+
+  /* add generated code to html variable */
+
+  /* insert html of all the links into post-author */
+
+  /*  End loop for every article */
+}
