@@ -83,8 +83,8 @@ function generateTags(){
   /* [DONE] START LOOP: for every article: */
   for(let article of articles) {
     /* [DONE] find tags wrapper */
-  const titleList = article.querySelector(optArticleTagsSelector)
-  console.log(titleList)
+  const tagsWrapper = article.querySelector(optArticleTagsSelector)
+  console.log(tagsWrapper)
     /* [DONE] make html variable with empty string */
     let html = ''
     /* [DONE] get tags from data-tags attribute */
@@ -105,7 +105,7 @@ function generateTags(){
     /* [DONE] END LOOP: for each tag */
     }
     /* [IN PROGRESS] insert HTML of all the links into the tags wrapper */
-    tagLinkHTML.innerHTML = html
+    tagsWrapper.innerHTML = html
   /* END LOOP: for every article: */
 }
 }
@@ -154,7 +154,7 @@ function addClickListenersToTags(){
   /* [DONE] START LOOP: for each link */
   for(let allTagsLink of allTagsLinks) {
     console.log(allTagsLink)
-    /* [DONE] add tagClickHandler as event listener for that link */
+  /* [DONE] add tagClickHandler as event listener for that link */
   allTagsLink.addEventListener('click', tagClickHandler)
   /* [IN PROGRESS] END LOOP: for each link */
 }
@@ -181,8 +181,22 @@ function generateAuthors() {
     console.log(authorLinkHTML)
   /* [DONE] add generated code to html variable */
     html = html + authorLinkHTML
+    console.log(html)
   /* [IN PROGRESS] insert html of all the links into post-author */
-    authorLinkHTML.innerHTML = html
+    authorsWrapper.innerHTML = html
   /*  End loop for every article */
   }
 }
+generateAuthors()
+
+function addClickListenersToAuthors() {
+  /* find all links to authors */
+
+  /* START LOOP: for each author */
+
+  /* add tagClickHandler as event listener for that author */
+
+  /* END LOOP: for each link */
+
+}
+addClickListenersToAuthors()
