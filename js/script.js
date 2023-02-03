@@ -83,8 +83,12 @@ console.log(params)
 /* Start LOOP for itering object */
 for(let tag in tags){
   console.log(tag + ' is used ' + tags[tag] + ' times');
+/* max value for params.max */
+if(tags[tag] > params.max){
+params.max = tags[tag];
 }
-
+/* END LOOP */
+}
 /* return params */
 const returnParams = {add: function (a, b){
   return a + b
