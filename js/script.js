@@ -88,7 +88,7 @@ function generateTags(){
     /* [DONE] make html variable with empty string */
     let html = ''
     /* [DONE] get tags from data-tags attribute */
-    const articleTags = clickedArticle.getAttribute('data-tags');
+    const articleTags = article.getAttribute('data-tags');
     console.log(articleTags);
 
     /* [DONE] split tags into array */
@@ -98,7 +98,7 @@ function generateTags(){
     for(let tag of articleTagsArray) {
       console.log(tag)
       /* [DONE] generate HTML of the link */
-      const tagLinkHTML = '<li><a href="#tag'- + articleTagsArray + '"><span>' + articleTagsArray + '</span></a></li>';
+      const tagLinkHTML = '<li><a href="#tag'- + tag + '"><span>' + tag + '</span></a></li>';
       console.log(linkHTML)
       /* [DONE] add generated code to html variable */
       html = html + tagLinkHTML
