@@ -76,7 +76,13 @@ for(let link of links){
   link.addEventListener('click', titleClickHandler);
 }
 
+function calculateTagsParams (tags)
+/* Define const 'params */
+const params = {min: 999999, max: 0}
+
 function generateTags(){
+  const tagsParams = calculateTagsParams(allTags);
+  console.log('tagsParams:', tagsParams)
   /* [NEW] create a new variable allTags with an empty object */
   let allTags = {};
 
