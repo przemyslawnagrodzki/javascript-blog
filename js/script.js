@@ -76,9 +76,23 @@ for(let link of links){
   link.addEventListener('click', titleClickHandler);
 }
 
-function calculateTagsParams (tags)
+function calculateTagsParams(tags) {
 /* Define const 'params */
 const params = {min: 999999, max: 0}
+console.log(params)
+/* Start LOOP for itering object */
+for(let tag in tags){
+  console.log(tag + ' is used ' + tags[tag] + ' times');
+}
+
+/* return params */
+const returnParams = {add: function (a, b){
+  return a + b
+  }
+}
+console.log(returnParams)
+}
+calculateTagsParams()
 
 function generateTags(){
   const tagsParams = calculateTagsParams(allTags);
