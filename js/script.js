@@ -41,7 +41,9 @@ const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
   optArticleTagsSelector = '.post-tags .list',
-  optArticleAuthorSelector = '.post .post-author';
+  optArticleAuthorSelector = '.post .post-author',
+  optCloudClassCount = 5,
+  optCloudClassPrefix = tag-size- ;
 
 function generateTitleLinks(customSelector = '') {
   console.log()
@@ -98,6 +100,11 @@ console.log(returnParams)
 }
 calculateTagsParams()
 
+function calculateTagClass(count, params){
+
+}
+calculateTagsParams()
+
 function generateTags(){
   const tagsParams = calculateTagsParams(allTags);
   console.log('tagsParams:', tagsParams)
@@ -146,11 +153,12 @@ function generateTags(){
 const tagList = document.querySelector(optTagsListSelector);
 
 /* [NEW] create variable for all links HTML code */
-let allTagsHTML = '';
+allTagsHTML += tagLinkHTML;
 /* [NEW] START LOOP: for each tag in allTags */
 for(let tag in allTags) {
 /* [NEW] generate code of a link and add in allTagsHTML: */
-allTagsHTML += tag + ' (' + allTags[tag] + ') ';
+const tagLinkHTML = '<li><a href="calculateTagClass(allTags[tag], tagsParam)"' class{"calculateTagClass(allTags[tag], tagsParam)"} + calculateTagClass(allTags[tag], tagsParam) + '</li>'
+console.log('tagLinkHTML:', tagLinkHTML)
 /* [NEW] END LOOP for each tag in allTags */
 }
 /* [NEW] add html from allTagsHTML to tagList */
@@ -222,7 +230,7 @@ function generateAuthors() {
     let html = ''
   /*  [DONE] get author from data-author attribute */
     const author = article.getAttribute('data-author')
-    console.loh(author)
+    console.log(author)
   /*  [DONE] generate HTML of the link */
     const authorLinkHTML = '<li><a href="#author-' + author + '"><span>' + author + '</span></a></li>'
     console.log(authorLinkHTML)
