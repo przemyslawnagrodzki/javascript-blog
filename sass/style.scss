@@ -131,3 +131,33 @@ h3 {
 a {
   color: darkmagenta;
 }
+
+.tag-size-1 {
+  font-size: 60%;
+  color: #ff9ff3;
+}
+
+.tag-size-2 {
+  font-size: 100%;
+  color: #f368e0;
+}
+
+.tag-size-3 {
+  font-size:140%;
+  color: #ff6b6b;
+}
+
+.tag-size-4 {
+  font-size: 180%;
+  color: #ee5253;
+}
+
+.tag-size-5 {
+  font-size: 220%;
+  color: #833471;
+}
+
+.tags.list li {
+  display: inline;
+}
+
