@@ -112,6 +112,8 @@ function calculateTagClass(count, params){
   classNumber = Math.floor( ( (count - params.min) / (params.max - 2) ) * optCloudClassCount + 1 );
 
   classNumber = Math.floor( ( (count - params.min) / (params.max - params.min) ) * optCloudClassCount + 1 );
+
+  return opts.cloudClassPrefix + classNumber;
 }
 calculateTagsParams()
 
@@ -236,8 +238,8 @@ function generateAuthors() {
   for(let article of articles) {
     console.log(article)
   /* [DONE] find authors wrapper */
-    const authorsWrapper = document.querySelector(optArticleAuthorSelector)
-    console.log(authorsWrapper)
+    const authorWrapper = document.querySelector(optArticleAuthorSelector)
+    console.log(authorWrapper)
   /*  [DONE] make html variable with empty string */
     let html = ''
   /*  [DONE] get author from data-author attribute */
