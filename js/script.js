@@ -43,7 +43,7 @@ const optArticleSelector = '.post',
   optArticleTagsSelector = '.post-tags .list',
   optArticleAuthorSelector = '.post .post-author',
   optCloudClassCount = 5,
-  optCloudClassPrefix = tag-size- ;
+  optCloudClassPrefix = 'tag-size-';
 
 function generateTitleLinks(customSelector = '') {
   console.log()
@@ -92,16 +92,26 @@ params.max = tags[tag];
 /* END LOOP */
 }
 /* return params */
-const returnParams = {add: function (a, b){
-  return a + b
-  }
-}
-console.log(returnParams)
+return params
 }
 calculateTagsParams()
 
 function calculateTagClass(count, params){
+  classNumber = Math.floor( 0.5 * 5 + 1 );
 
+  classNumber = Math.floor( 0.5 * optCloudClassCount + 1 );
+
+  classNumber = Math.floor( ( 4 / 8 ) * optCloudClassCount + 1 );
+
+  classNumber = Math.floor( ( (6 - 2) / (10 - 2) ) * optCloudClassCount + 1 );
+
+  classNumber = Math.floor( ( (count - 2) / (10 - 2) ) * optCloudClassCount + 1 );
+
+  classNumber = Math.floor( ( (count - 2) / (params.max - 2) ) * optCloudClassCount + 1 );
+
+  classNumber = Math.floor( ( (count - params.min) / (params.max - 2) ) * optCloudClassCount + 1 );
+
+  classNumber = Math.floor( ( (count - params.min) / (params.max - params.min) ) * optCloudClassCount + 1 );
 }
 calculateTagsParams()
 
@@ -157,8 +167,10 @@ allTagsHTML += tagLinkHTML;
 /* [NEW] START LOOP: for each tag in allTags */
 for(let tag in allTags) {
 /* [NEW] generate code of a link and add in allTagsHTML: */
-const tagLinkHTML = '<li><a href="calculateTagClass(allTags[tag], tagsParam)"' class{"calculateTagClass(allTags[tag], tagsParam)"} + calculateTagClass(allTags[tag], tagsParam) + '</li>'
-console.log('tagLinkHTML:', tagLinkHTML)
+
+
+
+
 /* [NEW] END LOOP for each tag in allTags */
 }
 /* [NEW] add html from allTagsHTML to tagList */
