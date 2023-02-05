@@ -171,7 +171,7 @@ allTagsHTML += tagLinkHTML;
 for(let tag in allTags) {
 /* [NEW] generate code of a link and add in allTagsHTML: */
 
-
+// Jak to zrobić? //
 
 
 /* [NEW] END LOOP for each tag in allTags */
@@ -272,7 +272,7 @@ allAuthorsHTML += authorLinkHTML;
 
 /* [NEW] generate code of a link and add in allTagsHTML: */
 
-
+// Jak to zrobić? //
 
 
 
