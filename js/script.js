@@ -1,5 +1,7 @@
 const templates = {
-  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
+  tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML)
+
 }
 
 'use strict';
@@ -154,7 +156,8 @@ function generateTags(){
     for(let tag of articleTagsArray) {
       console.log(tag)
       /* [DONE] generate HTML of the link */
-      const tagLinkHTML = '<li><a href="#tag'- + tag + '"><span>' + tag + '</span></a></li>';
+      const linkHTMLData = {id: tagId, title: tagTitle};
+      const linkHTML = templates.articleLink(linkHTMLData);
       console.log(tagLinkHTML)
       /* [DONE] add generated code to html variable */
       html = html + tagLinkHTML
