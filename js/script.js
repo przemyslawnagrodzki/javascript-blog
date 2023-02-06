@@ -2,7 +2,8 @@ const templates = {
   articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
   tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML),
   authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML),
-  tagCloudLink: Handlebars.compile(document.querySelector('#template-tag-cloud-link').innerHTML)
+  tagCloudLink: Handlebars.compile(document.querySelector('#template-tag-cloud-link').innerHTML),
+  authorCloudLink: Handlebars.compile(document.querySelector('#template-author-cloud-link').innerHTML)
 }
 
 'use strict';
@@ -285,16 +286,15 @@ function generateAuthors() {
 const authorsList = document.querySelector(opts.authorsListSelector);
 console.log(authorsList)
 /* [NEW] create variable for all links HTML code */
-allAuthorsHTML += authorLinkHTML;
-
-/* [NEW] generate code of a link and add in allTagsHTML: */
-
-// Jak to zrobić? //
-
-
-
+allAuthorsData.authors.push({
+  author: author,
+  count: allAuthors[author],
+});
+/* [NEW] generate code of a link and add in allAuthorsHTML: */
+const allAuthorsData = {authors: []};
 /* [NEW] add html from allAuthorsHTML to authorsList */
-authorsList.innerHTML = allAuthorsHTML;
+authorList.innerHTML = templates.authorCloudLink(allAuthorsData);
+console.log(allAuthorsData)
  /*  End loop for every article */
 }
 }
