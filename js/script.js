@@ -1,6 +1,7 @@
 const templates = {
   articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
-  tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML)
+  tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML),
+  authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML)
 
 }
 
@@ -157,7 +158,7 @@ function generateTags(){
       console.log(tag)
       /* [DONE] generate HTML of the link */
       const linkHTMLData = {id: tagId, title: tagTitle};
-      const linkHTML = templates.articleLink(linkHTMLData);
+      const linkHTML = templates.tagLink(linkHTMLData);
       console.log(tagLinkHTML)
       /* [DONE] add generated code to html variable */
       html = html + tagLinkHTML
@@ -261,7 +262,8 @@ function generateAuthors() {
     const author = article.getAttribute('data-author')
     console.log(author)
   /*  [DONE] generate HTML of the link */
-    const authorLinkHTML = '<li><a href="#author-' + author + '"><span>' + author + '</span></a></li>'
+  const linkHTMLData = {id: authorId, title:authorTitle};
+  const linkHTML = templates.authorLink(linkHTMLData);
     console.log(authorLinkHTML)
   /* [DONE] add generated code to html variable */
     html = html + authorLinkHTML
